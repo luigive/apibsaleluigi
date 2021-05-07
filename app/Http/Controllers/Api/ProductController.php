@@ -13,15 +13,15 @@ class ProductController extends Controller
     public function index(Request $request)
     {
 
+    //recordar que cuando coloco el search, me quita el "scope" y coloca la primera letra en minuscula
 
-        if ($request["category"] != ''){
             $products = Product::with('category')
-            ->where('category',$request["category"])
+            ->searchNameProducts($request["name"])
+            ->searchCategory($request["category"])
+            ->orderProduct($request["orderby"])
             ->paginate();
-            //se puede usar el get tambien.
-        }else{
-            $products = Product::with('category')->paginate();
-        }
+
+
         //respuesta especifica
         return response()->json(['products'=>$products]);
 
