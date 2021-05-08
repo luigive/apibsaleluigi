@@ -1,5 +1,7 @@
 <?php
-
+// esto es para evitar errores CORS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE");
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
