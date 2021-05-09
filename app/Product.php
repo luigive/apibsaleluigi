@@ -38,11 +38,11 @@ class Product extends Model
 
         //esta funcion es para ordenar productos
         public function scopeOrderProduct($query,$orderby){
-            if(!in_array($orderby,['ASC','DESC'])){
+            if(!in_array($orderby,['ASC','DESC','asc','desc'])){
                 return;
             }
-    
-            $query->orderBy('price',$orderby);
+
+            $query->orderByRaw('price - (price * discount / 100)',$orderby);
         }
 
 
