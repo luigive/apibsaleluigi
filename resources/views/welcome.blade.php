@@ -17,10 +17,10 @@
             <a class="navbar-brand" href="#">
                 <img src="img/bsalelogo.png" height="60" class="d-inline-block align-text-top">
             </a>
-            <form class="d-flex">
+            <div class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Producto" aria-label="Search" id="productS" onkeyup="FilterDataEnter(event)">
                 <button class="btn btn-light" type="button" onclick="FilterData()">Buscar</button>
-            </form>
+            </div>
         </div>
         </div>
     </nav>
@@ -69,6 +69,7 @@
     //funcion para cuando se presiobna enter
     function FilterDataEnter(event){
         if (event.keyCode === 13) {
+
             FilterData();
         }
     }
