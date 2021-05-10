@@ -42,7 +42,7 @@ class Product extends Model
                 return;
             }
 
-            $query->orderByRaw('price - (price * discount / 100)',$orderby);
+            $query->orderByRaw('price - (price * discount / 100) '.$orderby);
         }
 
 
