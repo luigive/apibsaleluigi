@@ -73,13 +73,12 @@
         }
     }
 
-    //funcion del filtro, 
+    //funcion del filtro, para que rellene la interfax
     function FilterData(pagina){
 
         if (typeof arguments[0] == "undefined"){
             var pagina = 1; 
         }
-        debugger;
         let name = document.getElementById('productS').value;
         let categorieselect = document.getElementById('categories').value;
         let orderby = document.getElementById('orderbyprice').value;
