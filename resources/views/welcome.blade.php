@@ -76,9 +76,10 @@
     //funcion del filtro, 
     function FilterData(pagina){
 
-        if (arguments[0] == undefined){
-            let pagina = 1; 
+        if (typeof arguments[0] == "undefined"){
+            var pagina = 1; 
         }
+        debugger;
         let name = document.getElementById('productS').value;
         let categorieselect = document.getElementById('categories').value;
         let orderby = document.getElementById('orderbyprice').value;
